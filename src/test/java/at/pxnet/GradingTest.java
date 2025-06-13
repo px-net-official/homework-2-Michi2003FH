@@ -43,7 +43,6 @@ public class GradingTest {
             throw new AssertionError(e);
         }
     }
-    //Test
 
     private boolean isFailing(Object person) {
         var method = Arrays.stream(getGradingClass().getMethods())
