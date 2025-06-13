@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
 public class University {
     private final List<Person> students = new ArrayList<>();
 
@@ -18,14 +17,16 @@ public class University {
         students.remove(person);
     }
 
-    public List<Person> getStudent() {
+    // Fixed method name to match expected `getStudents()`
+    public List<Person> getStudents() {
         return Collections.unmodifiableList(students);
     }
 
-    public List<Person> getFaillingStudents() {
+    // Fixed typo in "getFaillingStudents" → "getFailingStudents"
+    public List<Person> getFailingStudents() {
         List<Person> failing = new ArrayList<>();
         for (Person student : students) {
-            if(Grading.isFailing(student)) {
+            if (Grading.isFailing(student)) {
                 failing.add(student);
             }
         }
@@ -36,11 +37,8 @@ public class University {
         if (students.isEmpty()) {
             return 0;
         }
-        int totalAge = 0;
-        for (Person student : students) {
-            totalAge += student.getAge();
-        }
-        return totalAge / (double)students.size();
+        int totalAge = students.stream().mapToInt(Person::getAge).sum(); // Stream API for better readability
+        return totalAge / (double) students.size();
     }
-
 }
+
