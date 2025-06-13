@@ -14,7 +14,7 @@ public class Person {
         this.age = age;
         this.grades = grades;
     }
-//TEST
+
     private void setGrades(int[] grades) {
         if (grades == null) {
             throw new IllegalArgumentException("grades cannot be null");

@@ -13,7 +13,7 @@ public class University {
             students.add(person);
         }
     }
-//TEST
+
     public void removeStudent(Person person) {
         students.remove(person);
     }
