@@ -13,7 +13,7 @@ public class Grading {
         if (grades.length < 2) {
             throw new IllegalStateException("Person must have at least two grades");
         }
-
+            //Test
         int countFours = 0;
 
         for (int grade : grades) {

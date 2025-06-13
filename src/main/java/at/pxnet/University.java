@@ -37,6 +37,7 @@ public class University {
         if (students.isEmpty()) {
             return 0;
         }
+        //Test
         int totalAge = students.stream().mapToInt(Person::getAge).sum(); // Stream API for better readability
         return totalAge / (double) students.size();
     }

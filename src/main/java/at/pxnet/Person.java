@@ -52,6 +52,7 @@ public class Person {
         if (grades == null) {
             throw new IllegalArgumentException("Grades cannot be null");
         }
+        //TEST
         for (int grade : grades) {
             if (grade < 1 || grade > 5) {
                 throw new IllegalArgumentException("Grade must be between 1 and 5");
