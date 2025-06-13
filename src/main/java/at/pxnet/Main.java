@@ -11,6 +11,7 @@ public class Main {
         // * age (int)
         // * array of grades (int)
         //
+         //für neuen versuch!
         // A grade can be any number from 1 to 5. If a number outside this range is passed as a grade, an
         // IllegalArgumentException should be thrown.
         //
