@@ -31,12 +31,12 @@ public class PersonTest {
 
     @Test
     void constructorThrowsExceptionForInvalidGrades() {
-        assertDoesNotThrow(() -> callPersonConstructor("123123", "Max Müller", 20, new int[] {}));
-        assertDoesNotThrow(() -> callPersonConstructor("123123", "Max Müller", 20, new int[] {1, 2, 3, 4, 5}));
-        assertDoesNotThrow(() -> callPersonConstructor("123123", "Max Müller", 20, new int[] {5}));
+        assertDoesNotThrow(() -> callPersonConstructor("123123", "Max Mueller", 20, new int[] {}));
+        assertDoesNotThrow(() -> callPersonConstructor("123123", "Max Mueller", 20, new int[] {1, 2, 3, 4, 5}));
+        assertDoesNotThrow(() -> callPersonConstructor("123123", "Max Mueller", 20, new int[] {5}));
 
-        assertThrows(IllegalArgumentException.class, () -> callPersonConstructor("123123", "Max Müller", 20, new int[] {2, 2, 0, 2}));
-        assertThrows(IllegalArgumentException.class, () -> callPersonConstructor("123123", "Max Müller", 20, new int[] {2, 6, 2, 2}));
+        assertThrows(IllegalArgumentException.class, () -> callPersonConstructor("123123", "Max Mueller", 20, new int[] {2, 2, 0, 2}));
+        assertThrows(IllegalArgumentException.class, () -> callPersonConstructor("123123", "Max Mueller", 20, new int[] {2, 6, 2, 2}));
     }
 
     @Test
@@ -89,6 +89,6 @@ public class PersonTest {
 
         assertEquals(1, constructors.size());
 
-        return constructors.getFirst();
+        return constructors.get(0);
     }
 }
